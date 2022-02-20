@@ -1,0 +1,66 @@
+@import "variable";
+
+body {
+  background-color: $bgcolor;
+  color: $textcolor;
+  font-size: $fontsize;
+  font: $font;
+}
+
+.header{
+  box-sizing: border-box;
+  background-color: $bgcolor2;
+  color: $textcolor;
+  padding: 15px;
+  text-align: center;
+}
+
+.nav-bar {
+  ul { width: 100px;
+  }
+  li {
+    display: grid;
+  }
+  a { 
+    background-color: $bgcolor3; 
+    color: $textcolor;
+    display: block;
+    padding: 12px; 
+    text-decoration: none; 
+    font-weight: 100;
+    width: 12%;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    text-align: center;
+  }
+}
+
+
+.nav-bar a:hover {
+  background-color: $bgcolor2; 
+}
+
+.nav-bar a.active {
+  background-color: $bgcolor4; 
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+@mixin special-text {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid yellowgreen;
+}
+
+.paragraph {
+  @include special-text;
+}
